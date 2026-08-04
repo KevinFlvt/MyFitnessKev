@@ -1,14 +1,17 @@
-import { StyleSheet } from 'react-native';
+import { useRouter } from "expo-router";
+import React from "react";
+import { Button, StyleSheet, Text, View } from "react-native";
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
+/**
+ * Ecran d'accueil de l'application
+ */
+export default function WorkoutScreen() {
+  const router = useRouter();
 
-export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+      <Text style={styles.title}>Prêt pour notre prochaine séance ? ^^</Text>
+      <Button title="Commencer la séance" onPress={() => router.push("/workout/active")} />
     </View>
   );
 }
@@ -16,16 +19,13 @@ export default function TabOneScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center"
   },
+
   title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20
+  }
 });
