@@ -63,4 +63,65 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
   centered: { alignItems: "center", marginTop: 40 },
+  // Styles for series
+  seriesContainer: {
+    marginTop: 15,
+  },
+  serieRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: "#f0f0f0",
+  },
+  serieNumber: {
+    fontWeight: "bold",
+    width: "10%",
+    textAlign: "center",
+  },
+  previousPerformance: {
+    color: "#888",
+    width: "25%",
+    textAlign: "center",
+  },
+  serieInput: {
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 6,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    width: "18%",
+    textAlign: "center",
+  },
+  seriesActions: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: 15,
+  },
+  actionButton: {
+    backgroundColor: "#007AFF",
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 8,
+  },
+  actionButtonText: {
+    color: "#fff",
+    fontWeight: "bold",
+  },
+  removeButton: {
+    backgroundColor: "#FF3B30",
+  },
+  seriesHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 5,
+    paddingHorizontal: 5,
+  },
+  headerText: {
+    fontWeight: 'bold',
+    fontSize: 12,
+    color: '#555',
+    textAlign: 'center',
+  },
 });
