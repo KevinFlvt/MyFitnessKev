@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, Text, TouchableOpacity } from 'react-native';
+import { styles } from '../../assets/styles/home/home.styles';
 import { useHome } from '../../hooks/useHome';
-import { styles } from './home.styles';
 
 export default function HomeScreen() {
   // Extraction des données et des actions depuis notre hook personnalisé

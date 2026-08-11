@@ -1,8 +1,18 @@
-export interface Exercise {
+export interface Serie {
   id: string;
+  numeroSerie: number;
+  poidsPrecedent?: number;
+  repetitionPrecedent?: number;
+  poids: number | null;
+  repetition: number | null;
+  isCompleted: boolean;
+}
+export interface Exercise {
+  id:string;
   name: string;
   targetRepetitions: number;
   targetSets: number;
+  series: Serie[];
 }
 
 export interface PreProgrammedWorkout {
@@ -23,18 +33,21 @@ export const mockWorkouts: PreProgrammedWorkout[] = [
         name: "Développé Couché (Barre)",
         targetRepetitions: 10,
         targetSets: 4,
+        series: [],
       },
       {
         id: "db-shoulder-press-1",
         name: "Développé Épaules (Haltères)",
         targetRepetitions: 12,
         targetSets: 3,
+        series: [],
       },
       {
         id: "tricep-dips-1",
         name: "Extensions Triceps (Poulie)",
         targetRepetitions: 15,
         targetSets: 3,
+        series: [],
       },
     ],
   },
